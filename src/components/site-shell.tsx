@@ -36,7 +36,7 @@ export function SiteHeader() {
       </div>
     </div>
     {open && <nav className="grid border-t border-border bg-background px-5 py-4 lg:hidden" aria-label="Mobile navigation">
-      {[...[['Our Practice','/our-practice'],['Patient Services','/services'],['Our Team','/our-team'],['For Professionals','/for-professionals'],['Resources','/resources'],['Contact','/contact']] as const]].map(([label,to]) => <Link key={to} to={to} onClick={() => setOpen(false)} className="border-b border-border py-3 font-medium last:border-0">{label}</Link>)}
+      {([['Our Practice','/our-practice'],['Patient Services','/services'],['Our Team','/our-team'],['For Professionals','/for-professionals'],['Resources','/resources'],['Contact','/contact']] as const).map(([label,to]) => <Link key={to} to={to} onClick={() => setOpen(false)} className="border-b border-border py-3 font-medium last:border-0">{label}</Link>)}
       <Button asChild className="mt-4 sm:hidden"><Link to="/become-a-patient" onClick={() => setOpen(false)}>Schedule an Appointment</Link></Button>
     </nav>}
   </header>;
