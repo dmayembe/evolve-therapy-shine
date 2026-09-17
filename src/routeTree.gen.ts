@@ -10,33 +10,329 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AccessibilityRouteImport } from './routes/accessibility'
+import { Route as AnxietyTherapyJacksonvilleRouteImport } from './routes/anxiety-therapy-jacksonville'
+import { Route as BecomeAPatientRouteImport } from './routes/become-a-patient'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DepressionTherapyJacksonvilleRouteImport } from './routes/depression-therapy-jacksonville'
+import { Route as EmdrTherapyRouteImport } from './routes/emdr-therapy'
+import { Route as FaqsRouteImport } from './routes/faqs'
+import { Route as ForProfessionalsRouteImport } from './routes/for-professionals'
+import { Route as GriefCounselingJacksonvilleRouteImport } from './routes/grief-counseling-jacksonville'
+import { Route as GroupTherapyRouteImport } from './routes/group-therapy'
+import { Route as InsuranceRouteImport } from './routes/insurance'
+import { Route as LgbtqAffirmingTherapyJacksonvilleRouteImport } from './routes/lgbtq-affirming-therapy-jacksonville'
+import { Route as OurPracticeRouteImport } from './routes/our-practice'
+import { Route as OurTeamRouteImport } from './routes/our-team'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PsychiatricMedicationManagementJacksonvilleRouteImport } from './routes/psychiatric-medication-management-jacksonville'
+import { Route as PsychotherapyRouteImport } from './routes/psychotherapy'
+import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as TelehealthRouteImport } from './routes/telehealth'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TraumaTherapyJacksonvilleFlRouteImport } from './routes/trauma-therapy-jacksonville-fl'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AccessibilityRoute = AccessibilityRouteImport.update({
+  id: '/accessibility',
+  path: '/accessibility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnxietyTherapyJacksonvilleRoute =
+  AnxietyTherapyJacksonvilleRouteImport.update({
+    id: '/anxiety-therapy-jacksonville',
+    path: '/anxiety-therapy-jacksonville',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BecomeAPatientRoute = BecomeAPatientRouteImport.update({
+  id: '/become-a-patient',
+  path: '/become-a-patient',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepressionTherapyJacksonvilleRoute =
+  DepressionTherapyJacksonvilleRouteImport.update({
+    id: '/depression-therapy-jacksonville',
+    path: '/depression-therapy-jacksonville',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const EmdrTherapyRoute = EmdrTherapyRouteImport.update({
+  id: '/emdr-therapy',
+  path: '/emdr-therapy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForProfessionalsRoute = ForProfessionalsRouteImport.update({
+  id: '/for-professionals',
+  path: '/for-professionals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GriefCounselingJacksonvilleRoute =
+  GriefCounselingJacksonvilleRouteImport.update({
+    id: '/grief-counseling-jacksonville',
+    path: '/grief-counseling-jacksonville',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GroupTherapyRoute = GroupTherapyRouteImport.update({
+  id: '/group-therapy',
+  path: '/group-therapy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsuranceRoute = InsuranceRouteImport.update({
+  id: '/insurance',
+  path: '/insurance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LgbtqAffirmingTherapyJacksonvilleRoute =
+  LgbtqAffirmingTherapyJacksonvilleRouteImport.update({
+    id: '/lgbtq-affirming-therapy-jacksonville',
+    path: '/lgbtq-affirming-therapy-jacksonville',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const OurPracticeRoute = OurPracticeRouteImport.update({
+  id: '/our-practice',
+  path: '/our-practice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurTeamRoute = OurTeamRouteImport.update({
+  id: '/our-team',
+  path: '/our-team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PsychiatricMedicationManagementJacksonvilleRoute =
+  PsychiatricMedicationManagementJacksonvilleRouteImport.update({
+    id: '/psychiatric-medication-management-jacksonville',
+    path: '/psychiatric-medication-management-jacksonville',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PsychotherapyRoute = PsychotherapyRouteImport.update({
+  id: '/psychotherapy',
+  path: '/psychotherapy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TelehealthRoute = TelehealthRouteImport.update({
+  id: '/telehealth',
+  path: '/telehealth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TraumaTherapyJacksonvilleFlRoute =
+  TraumaTherapyJacksonvilleFlRouteImport.update({
+    id: '/trauma-therapy-jacksonville-fl',
+    path: '/trauma-therapy-jacksonville-fl',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/anxiety-therapy-jacksonville': typeof AnxietyTherapyJacksonvilleRoute
+  '/become-a-patient': typeof BecomeAPatientRoute
+  '/contact': typeof ContactRoute
+  '/depression-therapy-jacksonville': typeof DepressionTherapyJacksonvilleRoute
+  '/emdr-therapy': typeof EmdrTherapyRoute
+  '/faqs': typeof FaqsRoute
+  '/for-professionals': typeof ForProfessionalsRoute
+  '/grief-counseling-jacksonville': typeof GriefCounselingJacksonvilleRoute
+  '/group-therapy': typeof GroupTherapyRoute
+  '/insurance': typeof InsuranceRoute
+  '/lgbtq-affirming-therapy-jacksonville': typeof LgbtqAffirmingTherapyJacksonvilleRoute
+  '/our-practice': typeof OurPracticeRoute
+  '/our-team': typeof OurTeamRoute
+  '/privacy': typeof PrivacyRoute
+  '/psychiatric-medication-management-jacksonville': typeof PsychiatricMedicationManagementJacksonvilleRoute
+  '/psychotherapy': typeof PsychotherapyRoute
+  '/resources': typeof ResourcesRoute
+  '/services': typeof ServicesRoute
+  '/telehealth': typeof TelehealthRoute
+  '/terms': typeof TermsRoute
+  '/trauma-therapy-jacksonville-fl': typeof TraumaTherapyJacksonvilleFlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/anxiety-therapy-jacksonville': typeof AnxietyTherapyJacksonvilleRoute
+  '/become-a-patient': typeof BecomeAPatientRoute
+  '/contact': typeof ContactRoute
+  '/depression-therapy-jacksonville': typeof DepressionTherapyJacksonvilleRoute
+  '/emdr-therapy': typeof EmdrTherapyRoute
+  '/faqs': typeof FaqsRoute
+  '/for-professionals': typeof ForProfessionalsRoute
+  '/grief-counseling-jacksonville': typeof GriefCounselingJacksonvilleRoute
+  '/group-therapy': typeof GroupTherapyRoute
+  '/insurance': typeof InsuranceRoute
+  '/lgbtq-affirming-therapy-jacksonville': typeof LgbtqAffirmingTherapyJacksonvilleRoute
+  '/our-practice': typeof OurPracticeRoute
+  '/our-team': typeof OurTeamRoute
+  '/privacy': typeof PrivacyRoute
+  '/psychiatric-medication-management-jacksonville': typeof PsychiatricMedicationManagementJacksonvilleRoute
+  '/psychotherapy': typeof PsychotherapyRoute
+  '/resources': typeof ResourcesRoute
+  '/services': typeof ServicesRoute
+  '/telehealth': typeof TelehealthRoute
+  '/terms': typeof TermsRoute
+  '/trauma-therapy-jacksonville-fl': typeof TraumaTherapyJacksonvilleFlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/anxiety-therapy-jacksonville': typeof AnxietyTherapyJacksonvilleRoute
+  '/become-a-patient': typeof BecomeAPatientRoute
+  '/contact': typeof ContactRoute
+  '/depression-therapy-jacksonville': typeof DepressionTherapyJacksonvilleRoute
+  '/emdr-therapy': typeof EmdrTherapyRoute
+  '/faqs': typeof FaqsRoute
+  '/for-professionals': typeof ForProfessionalsRoute
+  '/grief-counseling-jacksonville': typeof GriefCounselingJacksonvilleRoute
+  '/group-therapy': typeof GroupTherapyRoute
+  '/insurance': typeof InsuranceRoute
+  '/lgbtq-affirming-therapy-jacksonville': typeof LgbtqAffirmingTherapyJacksonvilleRoute
+  '/our-practice': typeof OurPracticeRoute
+  '/our-team': typeof OurTeamRoute
+  '/privacy': typeof PrivacyRoute
+  '/psychiatric-medication-management-jacksonville': typeof PsychiatricMedicationManagementJacksonvilleRoute
+  '/psychotherapy': typeof PsychotherapyRoute
+  '/resources': typeof ResourcesRoute
+  '/services': typeof ServicesRoute
+  '/telehealth': typeof TelehealthRoute
+  '/terms': typeof TermsRoute
+  '/trauma-therapy-jacksonville-fl': typeof TraumaTherapyJacksonvilleFlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/accessibility'
+    | '/anxiety-therapy-jacksonville'
+    | '/become-a-patient'
+    | '/contact'
+    | '/depression-therapy-jacksonville'
+    | '/emdr-therapy'
+    | '/faqs'
+    | '/for-professionals'
+    | '/grief-counseling-jacksonville'
+    | '/group-therapy'
+    | '/insurance'
+    | '/lgbtq-affirming-therapy-jacksonville'
+    | '/our-practice'
+    | '/our-team'
+    | '/privacy'
+    | '/psychiatric-medication-management-jacksonville'
+    | '/psychotherapy'
+    | '/resources'
+    | '/services'
+    | '/telehealth'
+    | '/terms'
+    | '/trauma-therapy-jacksonville-fl'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/accessibility'
+    | '/anxiety-therapy-jacksonville'
+    | '/become-a-patient'
+    | '/contact'
+    | '/depression-therapy-jacksonville'
+    | '/emdr-therapy'
+    | '/faqs'
+    | '/for-professionals'
+    | '/grief-counseling-jacksonville'
+    | '/group-therapy'
+    | '/insurance'
+    | '/lgbtq-affirming-therapy-jacksonville'
+    | '/our-practice'
+    | '/our-team'
+    | '/privacy'
+    | '/psychiatric-medication-management-jacksonville'
+    | '/psychotherapy'
+    | '/resources'
+    | '/services'
+    | '/telehealth'
+    | '/terms'
+    | '/trauma-therapy-jacksonville-fl'
+  id:
+    | '__root__'
+    | '/'
+    | '/accessibility'
+    | '/anxiety-therapy-jacksonville'
+    | '/become-a-patient'
+    | '/contact'
+    | '/depression-therapy-jacksonville'
+    | '/emdr-therapy'
+    | '/faqs'
+    | '/for-professionals'
+    | '/grief-counseling-jacksonville'
+    | '/group-therapy'
+    | '/insurance'
+    | '/lgbtq-affirming-therapy-jacksonville'
+    | '/our-practice'
+    | '/our-team'
+    | '/privacy'
+    | '/psychiatric-medication-management-jacksonville'
+    | '/psychotherapy'
+    | '/resources'
+    | '/services'
+    | '/telehealth'
+    | '/terms'
+    | '/trauma-therapy-jacksonville-fl'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AccessibilityRoute: typeof AccessibilityRoute
+  AnxietyTherapyJacksonvilleRoute: typeof AnxietyTherapyJacksonvilleRoute
+  BecomeAPatientRoute: typeof BecomeAPatientRoute
+  ContactRoute: typeof ContactRoute
+  DepressionTherapyJacksonvilleRoute: typeof DepressionTherapyJacksonvilleRoute
+  EmdrTherapyRoute: typeof EmdrTherapyRoute
+  FaqsRoute: typeof FaqsRoute
+  ForProfessionalsRoute: typeof ForProfessionalsRoute
+  GriefCounselingJacksonvilleRoute: typeof GriefCounselingJacksonvilleRoute
+  GroupTherapyRoute: typeof GroupTherapyRoute
+  InsuranceRoute: typeof InsuranceRoute
+  LgbtqAffirmingTherapyJacksonvilleRoute: typeof LgbtqAffirmingTherapyJacksonvilleRoute
+  OurPracticeRoute: typeof OurPracticeRoute
+  OurTeamRoute: typeof OurTeamRoute
+  PrivacyRoute: typeof PrivacyRoute
+  PsychiatricMedicationManagementJacksonvilleRoute: typeof PsychiatricMedicationManagementJacksonvilleRoute
+  PsychotherapyRoute: typeof PsychotherapyRoute
+  ResourcesRoute: typeof ResourcesRoute
+  ServicesRoute: typeof ServicesRoute
+  TelehealthRoute: typeof TelehealthRoute
+  TermsRoute: typeof TermsRoute
+  TraumaTherapyJacksonvilleFlRoute: typeof TraumaTherapyJacksonvilleFlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +344,189 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/accessibility': {
+      id: '/accessibility'
+      path: '/accessibility'
+      fullPath: '/accessibility'
+      preLoaderRoute: typeof AccessibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/anxiety-therapy-jacksonville': {
+      id: '/anxiety-therapy-jacksonville'
+      path: '/anxiety-therapy-jacksonville'
+      fullPath: '/anxiety-therapy-jacksonville'
+      preLoaderRoute: typeof AnxietyTherapyJacksonvilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/become-a-patient': {
+      id: '/become-a-patient'
+      path: '/become-a-patient'
+      fullPath: '/become-a-patient'
+      preLoaderRoute: typeof BecomeAPatientRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/depression-therapy-jacksonville': {
+      id: '/depression-therapy-jacksonville'
+      path: '/depression-therapy-jacksonville'
+      fullPath: '/depression-therapy-jacksonville'
+      preLoaderRoute: typeof DepressionTherapyJacksonvilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/emdr-therapy': {
+      id: '/emdr-therapy'
+      path: '/emdr-therapy'
+      fullPath: '/emdr-therapy'
+      preLoaderRoute: typeof EmdrTherapyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/for-professionals': {
+      id: '/for-professionals'
+      path: '/for-professionals'
+      fullPath: '/for-professionals'
+      preLoaderRoute: typeof ForProfessionalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/grief-counseling-jacksonville': {
+      id: '/grief-counseling-jacksonville'
+      path: '/grief-counseling-jacksonville'
+      fullPath: '/grief-counseling-jacksonville'
+      preLoaderRoute: typeof GriefCounselingJacksonvilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/group-therapy': {
+      id: '/group-therapy'
+      path: '/group-therapy'
+      fullPath: '/group-therapy'
+      preLoaderRoute: typeof GroupTherapyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insurance': {
+      id: '/insurance'
+      path: '/insurance'
+      fullPath: '/insurance'
+      preLoaderRoute: typeof InsuranceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lgbtq-affirming-therapy-jacksonville': {
+      id: '/lgbtq-affirming-therapy-jacksonville'
+      path: '/lgbtq-affirming-therapy-jacksonville'
+      fullPath: '/lgbtq-affirming-therapy-jacksonville'
+      preLoaderRoute: typeof LgbtqAffirmingTherapyJacksonvilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-practice': {
+      id: '/our-practice'
+      path: '/our-practice'
+      fullPath: '/our-practice'
+      preLoaderRoute: typeof OurPracticeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-team': {
+      id: '/our-team'
+      path: '/our-team'
+      fullPath: '/our-team'
+      preLoaderRoute: typeof OurTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/psychiatric-medication-management-jacksonville': {
+      id: '/psychiatric-medication-management-jacksonville'
+      path: '/psychiatric-medication-management-jacksonville'
+      fullPath: '/psychiatric-medication-management-jacksonville'
+      preLoaderRoute: typeof PsychiatricMedicationManagementJacksonvilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/psychotherapy': {
+      id: '/psychotherapy'
+      path: '/psychotherapy'
+      fullPath: '/psychotherapy'
+      preLoaderRoute: typeof PsychotherapyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/telehealth': {
+      id: '/telehealth'
+      path: '/telehealth'
+      fullPath: '/telehealth'
+      preLoaderRoute: typeof TelehealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trauma-therapy-jacksonville-fl': {
+      id: '/trauma-therapy-jacksonville-fl'
+      path: '/trauma-therapy-jacksonville-fl'
+      fullPath: '/trauma-therapy-jacksonville-fl'
+      preLoaderRoute: typeof TraumaTherapyJacksonvilleFlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AccessibilityRoute: AccessibilityRoute,
+  AnxietyTherapyJacksonvilleRoute: AnxietyTherapyJacksonvilleRoute,
+  BecomeAPatientRoute: BecomeAPatientRoute,
+  ContactRoute: ContactRoute,
+  DepressionTherapyJacksonvilleRoute: DepressionTherapyJacksonvilleRoute,
+  EmdrTherapyRoute: EmdrTherapyRoute,
+  FaqsRoute: FaqsRoute,
+  ForProfessionalsRoute: ForProfessionalsRoute,
+  GriefCounselingJacksonvilleRoute: GriefCounselingJacksonvilleRoute,
+  GroupTherapyRoute: GroupTherapyRoute,
+  InsuranceRoute: InsuranceRoute,
+  LgbtqAffirmingTherapyJacksonvilleRoute:
+    LgbtqAffirmingTherapyJacksonvilleRoute,
+  OurPracticeRoute: OurPracticeRoute,
+  OurTeamRoute: OurTeamRoute,
+  PrivacyRoute: PrivacyRoute,
+  PsychiatricMedicationManagementJacksonvilleRoute:
+    PsychiatricMedicationManagementJacksonvilleRoute,
+  PsychotherapyRoute: PsychotherapyRoute,
+  ResourcesRoute: ResourcesRoute,
+  ServicesRoute: ServicesRoute,
+  TelehealthRoute: TelehealthRoute,
+  TermsRoute: TermsRoute,
+  TraumaTherapyJacksonvilleFlRoute: TraumaTherapyJacksonvilleFlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
