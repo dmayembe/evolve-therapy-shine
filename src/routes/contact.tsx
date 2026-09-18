@@ -1,3 +1,25 @@
-import { createFileRoute } from "@tanstack/react-router"; import { BasicPage } from "@/components/basic-page"; import { routeHead } from "@/components/content-page";
-export const Route=createFileRoute("/contact")({head:()=>routeHead("Contact Evolve Therapy in Jacksonville, FL","Find Evolve Therapy INC at 9428 Baymeadows Rd #420 in Jacksonville and learn how to get started.","/contact"),component:Page});
-function Page(){return <BasicPage eyebrow="Contact and location" title="Contact Evolve Therapy in Jacksonville, FL" intro="Evolve Therapy INC is located in Baymeadows at 9428 Baymeadows Rd #420, Jacksonville, FL 32256." notice="Primary phone, email, office hours, verified appointment link, parking details, and official map listing must be confirmed by the owner before publication." sections={[{title:"Practice address",text:"9428 Baymeadows Rd #420, Jacksonville, FL 32256."},{title:"New patients",text:"Review services and insurance information, then use the verified practice contact method to ask about fit and current availability."},{title:"Telehealth",text:"Remote care may be available when the client's location, clinician licensure, privacy, and clinical circumstances allow."},{title:"Urgent support",text:"This website is not monitored for emergencies. In a crisis, call or text 988 in the United States. For an immediate emergency, call 911."}]} />}
+import { createFileRoute } from "@tanstack/react-router";
+import { BasicPage } from "@/components/basic-page";
+import { routeHead } from "@/components/content-page";
+
+export const Route = createFileRoute("/contact")({
+  head: () => routeHead("Contact Evolve Therapy in Jacksonville, FL", "Call 904-862-6788 or email reception@evolvetherapyjax.com. Evolve Therapy is at 9428 Baymeadows Rd #420, Jacksonville, FL 32256.", "/contact"),
+  component: Page,
+});
+
+function Page() {
+  return (
+    <BasicPage
+      eyebrow="Contact and location"
+      title="Contact Evolve Therapy in Jacksonville, FL"
+      intro="Call 904-862-6788 or email reception@evolvetherapyjax.com, Monday through Friday, 9:00 am to 4:00 pm."
+      notice="A verified online appointment link, parking details, and the official map listing still need to be confirmed by the practice."
+      sections={[
+        { title: "Phone and email", text: "Phone: 904-862-6788. Email: reception@evolvetherapyjax.com. Office hours are Monday through Friday, 9:00 am to 4:00 pm." },
+        { title: "Practice address", text: "9428 Baymeadows Rd #420, Jacksonville, FL 32256." },
+        { title: "New patients", text: "Review services and insurance information, then call or email the practice to ask about fit and current availability." },
+        { title: "Urgent support", text: "This website and inbox are not monitored for emergencies. In a crisis, call or text 988 in the United States. For an immediate emergency, call 911." },
+      ]}
+    />
+  );
+}
