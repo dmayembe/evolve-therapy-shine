@@ -32,6 +32,8 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TelehealthRouteImport } from './routes/telehealth'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TraumaTherapyJacksonvilleFlRouteImport } from './routes/trauma-therapy-jacksonville-fl'
+import { Route as OurTeamIndexRouteImport } from './routes/our-team.index'
+import { Route as OurTeamSlugRouteImport } from './routes/our-team.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -154,6 +156,16 @@ const TraumaTherapyJacksonvilleFlRoute =
     path: '/trauma-therapy-jacksonville-fl',
     getParentRoute: () => rootRouteImport,
   } as any)
+const OurTeamIndexRoute = OurTeamIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => OurTeamRoute,
+} as any)
+const OurTeamSlugRoute = OurTeamSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => OurTeamRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -170,7 +182,7 @@ export interface FileRoutesByFullPath {
   '/insurance': typeof InsuranceRoute
   '/lgbtq-affirming-therapy-jacksonville': typeof LgbtqAffirmingTherapyJacksonvilleRoute
   '/our-practice': typeof OurPracticeRoute
-  '/our-team': typeof OurTeamRoute
+  '/our-team': typeof OurTeamRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/psychiatric-medication-management-jacksonville': typeof PsychiatricMedicationManagementJacksonvilleRoute
   '/psychotherapy': typeof PsychotherapyRoute
@@ -179,6 +191,8 @@ export interface FileRoutesByFullPath {
   '/telehealth': typeof TelehealthRoute
   '/terms': typeof TermsRoute
   '/trauma-therapy-jacksonville-fl': typeof TraumaTherapyJacksonvilleFlRoute
+  '/our-team/$slug': typeof OurTeamSlugRoute
+  '/our-team/': typeof OurTeamIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -195,7 +209,6 @@ export interface FileRoutesByTo {
   '/insurance': typeof InsuranceRoute
   '/lgbtq-affirming-therapy-jacksonville': typeof LgbtqAffirmingTherapyJacksonvilleRoute
   '/our-practice': typeof OurPracticeRoute
-  '/our-team': typeof OurTeamRoute
   '/privacy': typeof PrivacyRoute
   '/psychiatric-medication-management-jacksonville': typeof PsychiatricMedicationManagementJacksonvilleRoute
   '/psychotherapy': typeof PsychotherapyRoute
@@ -204,6 +217,8 @@ export interface FileRoutesByTo {
   '/telehealth': typeof TelehealthRoute
   '/terms': typeof TermsRoute
   '/trauma-therapy-jacksonville-fl': typeof TraumaTherapyJacksonvilleFlRoute
+  '/our-team/$slug': typeof OurTeamSlugRoute
+  '/our-team': typeof OurTeamIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -221,7 +236,7 @@ export interface FileRoutesById {
   '/insurance': typeof InsuranceRoute
   '/lgbtq-affirming-therapy-jacksonville': typeof LgbtqAffirmingTherapyJacksonvilleRoute
   '/our-practice': typeof OurPracticeRoute
-  '/our-team': typeof OurTeamRoute
+  '/our-team': typeof OurTeamRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/psychiatric-medication-management-jacksonville': typeof PsychiatricMedicationManagementJacksonvilleRoute
   '/psychotherapy': typeof PsychotherapyRoute
@@ -230,6 +245,8 @@ export interface FileRoutesById {
   '/telehealth': typeof TelehealthRoute
   '/terms': typeof TermsRoute
   '/trauma-therapy-jacksonville-fl': typeof TraumaTherapyJacksonvilleFlRoute
+  '/our-team/$slug': typeof OurTeamSlugRoute
+  '/our-team/': typeof OurTeamIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -257,6 +274,8 @@ export interface FileRouteTypes {
     | '/telehealth'
     | '/terms'
     | '/trauma-therapy-jacksonville-fl'
+    | '/our-team/$slug'
+    | '/our-team/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -273,7 +292,6 @@ export interface FileRouteTypes {
     | '/insurance'
     | '/lgbtq-affirming-therapy-jacksonville'
     | '/our-practice'
-    | '/our-team'
     | '/privacy'
     | '/psychiatric-medication-management-jacksonville'
     | '/psychotherapy'
@@ -282,6 +300,8 @@ export interface FileRouteTypes {
     | '/telehealth'
     | '/terms'
     | '/trauma-therapy-jacksonville-fl'
+    | '/our-team/$slug'
+    | '/our-team'
   id:
     | '__root__'
     | '/'
@@ -307,6 +327,8 @@ export interface FileRouteTypes {
     | '/telehealth'
     | '/terms'
     | '/trauma-therapy-jacksonville-fl'
+    | '/our-team/$slug'
+    | '/our-team/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -324,7 +346,7 @@ export interface RootRouteChildren {
   InsuranceRoute: typeof InsuranceRoute
   LgbtqAffirmingTherapyJacksonvilleRoute: typeof LgbtqAffirmingTherapyJacksonvilleRoute
   OurPracticeRoute: typeof OurPracticeRoute
-  OurTeamRoute: typeof OurTeamRoute
+  OurTeamRoute: typeof OurTeamRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
   PsychiatricMedicationManagementJacksonvilleRoute: typeof PsychiatricMedicationManagementJacksonvilleRoute
   PsychotherapyRoute: typeof PsychotherapyRoute
@@ -498,8 +520,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TraumaTherapyJacksonvilleFlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-team/': {
+      id: '/our-team/'
+      path: '/'
+      fullPath: '/our-team/'
+      preLoaderRoute: typeof OurTeamIndexRouteImport
+      parentRoute: typeof OurTeamRoute
+    }
+    '/our-team/$slug': {
+      id: '/our-team/$slug'
+      path: '/$slug'
+      fullPath: '/our-team/$slug'
+      preLoaderRoute: typeof OurTeamSlugRouteImport
+      parentRoute: typeof OurTeamRoute
+    }
   }
 }
+
+interface OurTeamRouteChildren {
+  OurTeamSlugRoute: typeof OurTeamSlugRoute
+  OurTeamIndexRoute: typeof OurTeamIndexRoute
+}
+
+const OurTeamRouteChildren: OurTeamRouteChildren = {
+  OurTeamSlugRoute: OurTeamSlugRoute,
+  OurTeamIndexRoute: OurTeamIndexRoute,
+}
+
+const OurTeamRouteWithChildren =
+  OurTeamRoute._addFileChildren(OurTeamRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -517,7 +566,7 @@ const rootRouteChildren: RootRouteChildren = {
   LgbtqAffirmingTherapyJacksonvilleRoute:
     LgbtqAffirmingTherapyJacksonvilleRoute,
   OurPracticeRoute: OurPracticeRoute,
-  OurTeamRoute: OurTeamRoute,
+  OurTeamRoute: OurTeamRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   PsychiatricMedicationManagementJacksonvilleRoute:
     PsychiatricMedicationManagementJacksonvilleRoute,
